@@ -1,0 +1,20 @@
+1) Aggiungere in BaseEntity un metodo astratto boolean chiamato isValid(). Restituisce true se tutte le proprietà sono valide, false altrimenti
+
+2) Overridare quel metodo nei Tipi concreti (Studente,Docente,Collaboratore)
+
+3) Mettere un toString fatto bene in Persona (non astratto)
+4) Overridarlo nei tipi concreti utilizzandolo come punto di partenza
+
+
+COSA CONTROLLARE NEGLI ISVALID\
+- non controllare id, tanto di quello se ne occupa db
+- per le stringhe, limitarsi a controllare che non siano nulle o vuote
+- per i numeri (lo stipendio), controllare che sia maggiore di 800
+- per il ruolo in Collaboratore, controllare che sia uno tra Infermiere,Bidello,Segreteria,Preside
+- per la data di nascita controllare, per gli studenti, che non sia superiore a oggi, per i docenti
+    che sia almeno 18 anni fa
+
+    LocalDate.now() prendete la data di oggi
+    isAfter() o isBefore() confrontate due date
+    con minusUnità (es minusDays) o plus aggiungete o togliete da una data
+    es: dopodomani -> LocalDate dopodomani = LocalDate.now().plusDays(2);

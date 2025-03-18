@@ -14,7 +14,7 @@ public class TaSSEyee
 		ArrayList<Lavoratore> lavoratori = new ArrayList<>();
 
 		Docente d = new Docente(1135L,"Stefano","Rubinetti", LocalDate.of(1995,8,27),7000,"computer");
-		Collaboratore c = new Collaboratore(2151L,"Claudio","Costantino",LocalDate.of(1999,3,16),7000,"PRESIDENTE!");
+		Collaboratore c = new Collaboratore(2151L,"Claudio","Costantino",LocalDate.of(1999,3,16),7000,"Preside");
 
 		lavoratori.add(d);
 		lavoratori.add(c);
